@@ -1,3 +1,62 @@
+# Notes for Project In general
+
+## Features
+
+# Surface level 
+
+I would like to create a app that hands out advise based on the a users goal, their current muscle index and their BMI and budget.
+The user should also be able to input back how much exercise they are currently doing so that. can be factored aswell inside of the app.
+
+
+I would like to be able to tell a user how many days it would take them to achieve their goals on their current directory.
+
+### Notes On Work Flow.
+
+#### How To Manage Commits. When I am managing commits. I plan to work with 3 layers of branches. The main branch(always functional always presentable). The dev branch(merge branch). The feature branch( This is where I plan on building functions)
+
+
+# MVP
+
+#### As a minimum viable product what features I would like
+
+###### Feature 1: I will need the user to be able to input their BMI and current weight. The Api will need to be able to communicate with the functions communicate with a script file. 
+
+For now I will just do this using id parameters inside of the url.
+
+
+###### Feature 2: I will now need a way to process the data that has been given to me. Take in BMI and weight with the maintenence calories of the user and
+the calorie defict. This data will be return the number of days that the user will take to be able to reach their weight loss goals.
+
+###### Feature 3
+The analyzed data will now need a way to be able to communicate with a new web page and load a the days.
+
+
+# Sprints
+
+### In order of priority
+
+##### Create a system of being able to store user data, so they may view their current goal.
+
+##### user should be able to remove their current goal.
+##### the user should be able to edit their current goal.
+##### There should be a cheat day function that should add calories onto the users current calores and extend the timer.
+
+##### A timer that shows how long off the user is from their goals.
+
+##### A second data analyzing function takes in the maintence and from the maintenence will return back to us the ratio of macros that we should eat. With the more steep the deficate the more protein and fats we will suggest that we have the user eat.
+
+##### Inside of the API instead of showing in text form. make it so that the ratio of foods is displayed in pie graph form instead of text.
+
+
+
+
+
+
+
+
+
+# Starter Pack notes
+
 # A starter webpack project for React
 
 This is a starter project that uses webpack to transpile and bundle ES6 React code. To use, consider these steps:
