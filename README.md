@@ -14,6 +14,28 @@ I would like to be able to tell a user how many days it would take them to achie
 
 #### How To Manage Commits. When I am managing commits. I plan to work with 3 layers of branches. The main branch(always functional always presentable). The dev branch(merge branch). The feature branch( This is where I plan on building functions)
 
+# Tasks For MVP(Must Do)
+
+## Create and style home page
+
+## Create and style form page
+
+## Create and style output page(uses id for now)
+
+## Setup function for anayzing BMI and calories
+
+## Link BMI and colorie calculator function to run on post in the form page
+
+# Make sure that the data is displayed inside of the output page.
+
+# Task
+
+## Create a database.(create seeds and migrations as if there will be multiple users.). But the user should be able to perform database functions without any authentication(for the first user.)
+
+## Create user login
+
+## Create user authenticated routes. We should now only be able to edit the data for the user.
+## test that the d
 
 # MVP
 
