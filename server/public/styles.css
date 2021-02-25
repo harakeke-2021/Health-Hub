@@ -1,4 +1,45 @@
+body {
+  margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
 
-.navbar a {
-  color: red
+.navbar {
+  background-color: antiquewhite;
+}
+
+.navbar a {  
+  margin-top: 30px;
+  background-color: darkgray;
+  border-color: black;
+  color: red;
+  margin: 50px;
+  border-radius: 10px;
+  border: darkviolet;
+  border-width: 10px;
+
+}
+
+.homeImages {
+  width: 100%;
+  top: 40%;
+}
+
+.homeImages img {
+  height: 300px;
+  width: 300px;
+}
+
+.goals a {
+  margin-top: 30px;
+  background-color: darkgray;
+  border-color: black;
+  color: red;
+  margin: 50px;
+  border-radius: 10px;
+  border: darkviolet;
+  border-width: 10px;
 }
