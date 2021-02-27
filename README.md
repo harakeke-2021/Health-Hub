@@ -1,5 +1,12 @@
 # Notes for Project In general
 
+/ { /* third task. Now I want to be able to run a calculator function that runs that sets state to a new calculated value. */ }
+// { /* fourth task. Create a new file for storing all api functions and let them sleep in there. */ }
+// { /* fifth task.  Go back and make sure that the mvp is complete. */ }
+// { /* sixth task. Testing is not necessary at this point because all the data is about to be replaced for database functionality. so we will be expecting the functionality of all our api routes and data our calculator function takes in to change once a db gets involved. */ }
+
+// { /* No testing until this point. Now we test */ }
+
 ## Features
 
 # Surface level 

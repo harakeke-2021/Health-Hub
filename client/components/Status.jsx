@@ -1,16 +1,16 @@
 import React from 'react'
-// import { Link } from 'react-router-dom'
+import store from '../store'
 
-function Status (props) {
+function Status () {
+  const reduxGlobalState = store.getState().goal
+
   return (
     <>
       <h1>Here is your current progress</h1>
-      <h2>{props.cWeight}</h2>
-      <h2>{props.gWeight}</h2>
-      <h2>{props.mCalories}</h2>
-      <h2>{props.cCalories}</h2>
-      <h2>{props.setDaysTillGoal}</h2>
-      {/* display props */}
+      <h4> The weight that you were originally{reduxGlobalState.cWeight}</h4>
+      <h4> The weight that I want to be {reduxGlobalState.gWeight}</h4>
+      <h4> The amount of calories that I would normally consume.{reduxGlobalState.mCalories}</h4>
+      <h4> The amount of  {reduxGlobalState.cCalories}</h4>
     </>
   )
 }

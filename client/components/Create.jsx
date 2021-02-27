@@ -1,31 +1,38 @@
 import React, { useState } from 'react'
-
+import store from '../store'
+import { Link } from 'react-router-dom'
 // import { Link } from 'react-router-dom'
 
-function Create (props) {
+function Create () {
   const [form, setForm] = useState({
     cWeight: 0,
     gWeight: 0,
     mCalories: 0,
     cCalories: 0
   })
-  // my next goal here is to get the useState data to update upon change
-  // my next goal after that is to update the global useState values
+
+  const reduxGlobalState = store.getState().goal
+
   function handleSubmit (event) {
     event.preventDefault()
-    console.log('The submit button does the thing that I want it to do.')
-    console.log(form.cWeight)
-    console.log(form.gWeight)
-    console.log(form.mCalories)
-    console.log(form.cCalories)
+    const action = {
+      type: 'NEW_GOAL',
+      goal: {
+        cWeight: Number(form.cWeight),
+        gWeight: Number(form.gWeight),
+        mCalories: Number(form.mCalories),
+        cCalories: Number(form.cCalories)
+      }
+    }
+    console.log(typeof form.cWeight)
+    console.log(typeof reduxGlobalState.cWeight)
+    store.dispatch(action)
+    // I would l
   }
 
   function handleChange (event) {
-    console.log(event.target.value)
     const { name, value } = event.target
     setForm({ ...form, [name]: value })
-    console.log('cWeight :' + form.cWeight)
-    console.log('gWeight :' + form.gWeight)
   }
 
   return (
@@ -43,13 +50,17 @@ function Create (props) {
         <label>
           Maintainence Calories:
         </label>
-        <input type="text" id="mCalories" name="cWeight"/>
+        <input type="text" id="mCalories" name="mCalories" onChange={handleChange}/>
         <label>
           Calories On Diet:
         </label>
-        <input type="text" id="cCalories" name="cCalories"/>
+        <input type="text" id="cCalories" name="cCalories" onChange={handleChange}/>
         <input type="submit" value="Submit"/>
       </form>
+      <h2>click here to see how much progress you have left.</h2>
+      <Link to="/progress">
+        Progress
+      </Link>
     </>
   )
 }
