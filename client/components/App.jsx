@@ -14,7 +14,7 @@ const App = () => {
 
       <Route exact path='/create' component={Create}/>
 
-      <Route exact path='/progress' component={Status}/>
+      <Route exact path='/progress' component={Status}/>  
 
       <Route exact path='/signIn' component={SignIn}/>
 
@@ -24,4 +24,11 @@ const App = () => {
   )
 }
 
+{/* although I am expecting the components to house props. I am mapping state to props from inside of the component
+which is why there is zero mention of that inside of app */}
+
+
+// I will need to look inside of the W6D2 exercise for better reference. when I am looking inside of those files
+// I will need to see if there is by any chance any difference with how components that extend other react components
+// function compared tojust the usual react components.
 export default App

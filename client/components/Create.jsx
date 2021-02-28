@@ -1,6 +1,7 @@
 import React, { useState } from 'react'
 import store from '../store'
 import { Link } from 'react-router-dom'
+import { connect } from 'react-redux'
 // import { Link } from 'react-router-dom'
 
 function Create () {
@@ -24,10 +25,6 @@ function Create () {
         cCalories: Number(form.cCalories)
       }
     }
-    console.log(typeof form.cWeight)
-    console.log(typeof reduxGlobalState.cWeight)
-    store.dispatch(action)
-    // I would l
   }
 
   function handleChange (event) {
@@ -65,4 +62,22 @@ function Create () {
   )
 }
 
-export default Create
+
+// inside of the W6D2-1 exercise use the AddWombatform as your direct refernece when
+// mapping over the functions inside of create.
+
+
+// function mapDispatchToProps(dispatch) {
+//  return {
+//    calculategoal: action => dispatch(action)
+//  }
+//}
+//
+//
+//
+//
+//
+//export default connect(null, mapDispatchToProps)(AddWombatForm)
+
+
+export default connect()(Create)

@@ -1,18 +1,39 @@
 import React from 'react'
-import store from '../store'
+import { connect } from 'react-redux'
 
-function Status () {
-  const reduxGlobalState = store.getState().goal
+import store from '../store'//replace the getState function.
+
+
+
+
+
+//Status does not use props or getState.
+function Status (props) {
+
+  const { goal } = props
 
   return (
     <>
+      <h4> The weight you should be if you are following a good fat burning diets </h4>
+
       <h1>Here is your current progress</h1>
-      <h4> The weight that you were originally{reduxGlobalState.cWeight}</h4>
-      <h4> The weight that I want to be {reduxGlobalState.gWeight}</h4>
-      <h4> The amount of calories that I would normally consume.{reduxGlobalState.mCalories}</h4>
-      <h4> The amount of  {reduxGlobalState.cCalories}</h4>
+      <h4> The weight that you were originally{goal.cWeight}</h4>
+      <h4> The weight that I want to be {goal.gWeight}</h4>
+      <h4> The amount of calories that I would normally consume.{goal.mCalories}</h4>
+      <h4> The amount of  {goal.cCalories}</h4>
+
     </>
   )
 }
 
-export default Status
+
+function mapStateToProps(state) {
+  return {
+    goal: state.goal
+  }
+}
+
+
+const connector = connect(mapStateToProps)
+const connected = connector(Status)
+export default connected
