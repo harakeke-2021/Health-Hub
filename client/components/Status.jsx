@@ -1,6 +1,6 @@
 import React from 'react'
 import { connect } from 'react-redux'
-
+import { Link } from 'react-router-dom'
 import store from '../store'//replace the getState function.
 
 
@@ -12,16 +12,19 @@ function Status (props) {
 
   const { goal } = props
 
+  // create a on load function here that runs new calculations when the page is loaded on the users progress.
+
+  
   return (
     <>
       <h4> The weight you should be if you are following a good fat burning diets </h4>
 
       <h1>Here is your current progress</h1>
-      <h4> The weight that you were originally{goal.cWeight}</h4>
-      <h4> The weight that I want to be {goal.gWeight}</h4>
-      <h4> The amount of calories that I would normally consume.{goal.mCalories}</h4>
-      <h4> The amount of  {goal.cCalories}</h4>
-
+      <h4> The weight that I want to be {goal.gWeight} kg from {goal.cWeight} kg</h4>
+      <h4> You are trying to burn off {goal.caloriestolose} calories in {goal.daystillgoal} days</h4>
+      <Link to="/create">
+        Want to create a new form
+      </Link>
     </>
   )
 }

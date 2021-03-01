@@ -2,19 +2,20 @@ import React, { useState } from 'react'
 import store from '../store'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
-import { ProgressPlugin } from 'webpack'
-// import { Link } from 'react-router-dom'
+
+import Calender from "./calender"//once the calender function has been built I would like to tidy
+//everything up and move the calender functionality into a seperate component.
+//make this new component an extension of a already existing one.
+
 
 function Create (props) {
-  
-
-  // component state.
 
   const [form, setForm] = useState({
     cWeight: 0,
     gWeight: 0,
     mCalories: 0,
-    cCalories: 0
+    cCalories: 0,
+    startDate: null
   })
 
   function handleChange (event) {
@@ -22,9 +23,14 @@ function Create (props) {
     setForm({ ...form, [name]: value })
   }
   
-  // On submit new data is being added to our form
   function handleSubmit (event) {
     event.preventDefault()
+    const caloriesin1kgfat = 9000
+    const weighttoloseinkg = Number(form.cWeight) - Number(form.gWeight)
+    const caloriestolose = caloriesin1kgfat * weighttoloseinkg
+    const calorieslostdaily = Number(form.mCalories) - Number(form.cCalories)
+    const daystillgoal = caloriestolose / calorieslostdaily
+    console.log(daystillgoal)
     const action = {
       type: 'NEW_GOAL',
       goal: {
@@ -32,26 +38,19 @@ function Create (props) {
         gWeight: Number(form.gWeight),
         mCalories: Number(form.mCalories),
         cCalories: Number(form.cCalories),
+        weightToLose: weighttoloseinkg,
+        caloriestolose: caloriestolose,
+        daystillgoal: daystillgoal,
+        startDate: form.startDate
       }
     }
-    this.form.store.dispatch(action),
-    this.setForm({
-    cWeight: 0,
-    gWeight: 0,
-    mCalories: 0,
-    cCalories: 0
-    }) 
-    // I have already defined the action.
-    // now I need to dispatch the action
-    // I also need to ontop of 
+    props.dispatch(action)
   }
-  
-  //this is a big no no. find a work around.
-  const reduxGlobalState = store.getState().goal
   
   return (
     <>
       <h1>Your new journey starts here. please give me your data.</h1>
+   
       <form onSubmit={handleSubmit}>
         <label>
           Current Weight:
@@ -75,14 +74,11 @@ function Create (props) {
       <Link to="/progress">
         Progress
       </Link>
+      <Calender/>
     </>
   )
+
 }
-
-
-// inside of the W6D2-1 exercise use the AddWombatform as your direct refernece when
-// mapping over the functions inside of create.
-
 
 function mapStateToProps(state) {
  return {
@@ -90,5 +86,5 @@ function mapStateToProps(state) {
  }
 }
 
+
 export default connect(mapStateToProps)(Create)
-// ok what more do I have to do to get this up and running .
