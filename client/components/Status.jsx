@@ -34,6 +34,4 @@ function mapStateToProps(state) {
 }
 
 
-const connector = connect(mapStateToProps)
-const connected = connector(Status)
-export default connected
+export default connect(mapStateToProps)(Status)
