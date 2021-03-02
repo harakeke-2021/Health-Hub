@@ -3,9 +3,11 @@ import store from '../store'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-import Calender from "./calender"//once the calender function has been built I would like to tidy
+//once the calender function has been built I would like to tidy
 //everything up and move the calender functionality into a seperate component.
 //make this new component an extension of a already existing one.
+
+
 
 
 function Create (props) {
@@ -41,7 +43,7 @@ function Create (props) {
         weightToLose: weighttoloseinkg,
         caloriestolose: caloriestolose,
         daystillgoal: daystillgoal,
-        startDate: form.startDate
+        startDate: new Date()
       }
     }
     props.dispatch(action)
@@ -49,8 +51,8 @@ function Create (props) {
   
   return (
     <>
-      <h1>Your new journey starts here. please give me your data.</h1>
-   
+      <h1>Your new journey to good health starts here. please give me your data.</h1>
+    <div className = "form">
       <form onSubmit={handleSubmit}>
         <label>
           Current Weight:
@@ -70,15 +72,18 @@ function Create (props) {
         <input type="text" id="cCalories" name="cCalories" onChange={handleChange}/>
         <input type="submit" value="Submit"/>
       </form>
+      </div>
+      <div className="bodyLink">
       <h2>click here to see how much progress you have left.</h2>
       <Link to="/progress">
         Progress
       </Link>
-      <Calender/>
+      </div>
     </>
   )
-
 }
+
+
 
 function mapStateToProps(state) {
  return {

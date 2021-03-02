@@ -44,5 +44,28 @@ body {
   border-width: 10px;
 }
 
+.heading {
+  background-color: salmon;
+}
 
-/* styling for the calender only here */
+.form input {
+  width: 100%
+}
+
+
+.bodyLink {
+  padding: 10px;
+}
+
+
+.bodyLink a {
+  color: red;
+  color: slategrey;
+  padding: 1em 1.5em;
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.bodyLink a:hover {
+  background-color: #555;
+}
