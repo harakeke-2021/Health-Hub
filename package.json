@@ -59,10 +59,12 @@
     "webpack-dev-server": "^3.11.2"
   },
   "dependencies": {
+    "knex": "^0.21.19",
     "react-datepicker": "^3.6.0",
     "react-redux": "^7.2.2",
     "react-router-dom": "^5.2.0",
     "redux": "^4.0.5",
+    "sqlite3": "^5.0.2",
     "superagent": "^6.1.0"
   }
 }
