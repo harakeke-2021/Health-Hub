@@ -1,5 +1,36 @@
 # Notes for Project In general
 
+
+
+/ { /* third task. Now I want to be able to run a calculator function that runs that sets state to a new calculated value. */ }
+// { /* fourth task. Create a new file for storing all api functions and let them sleep in there. */ }
+// { /* fifth task.  Go back and make sure that the mvp is complete. */ }
+// { /* sixth task. Testing is not necessary at this point because all the data is about to be replaced for database functionality. so we will be expecting the functionality of all our api routes and data our calculator function takes in to change once a db gets involved. */ }
+
+// { /* No testing until this point. Now we test */ }
+
+
+  {/*list of values that need to be calculated right off the bat. */}
+    {/* I need the create function to also send out a start time for the diet */}
+    
+    {/* calories that I would like to lose inside of my goal */}
+    {/* once I have the start date calculated I then need to figure out the difference between the current wieght and the weight goal */}
+    {/* once I have the weight I will then calculate the amount of calories inside of that weight using fat. */}
+    
+    {/* calculate the difference  */}
+    {/* My next step in this process would be for me to calculate the deficate from mcalories and ccalories */}
+    {/* With that value. what is next would be for me to take total calories to lose and divide it my the deficate*/}
+    {/* That should be able to return the amount of days, however will leave hours. minutes and seconds as a afterthought */}
+
+    {/* takes start date that is created from the form automatically*/}
+    {/* takes in the calculated expected end date*/}
+
+    {/* returns a percentage for how long it will take to reach goal */}
+    {/* return the number of days, hours, minutes and seconds that it will take to reach goal */}
+
+
+    {/* I would also fromm the users perspective be able to see how many calories have been burned */}
+    {/* I would like to be able to see how much weight has been lost from the start day to the current day */}
 ## Features
 
 # Surface level 
