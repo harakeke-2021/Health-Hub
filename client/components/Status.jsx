@@ -1,7 +1,7 @@
 import React from 'react'
 import { connect } from 'react-redux'
 import { Link } from 'react-router-dom'
-import store from '../store'//replace the getState function.
+import store from '../store'
 
 function Status (props) {
 

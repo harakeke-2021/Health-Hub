@@ -19,6 +19,4 @@ const CalorieReducer = (state = initialGoalState, action) => {
   }
 }
 
-
-
 export default CalorieReducer

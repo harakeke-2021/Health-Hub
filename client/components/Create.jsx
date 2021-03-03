@@ -3,13 +3,6 @@ import store from '../store'
 import { Link } from 'react-router-dom'
 import { connect } from 'react-redux'
 
-//once the calender function has been built I would like to tidy
-//everything up and move the calender functionality into a seperate component.
-//make this new component an extension of a already existing one.
-
-
-
-
 function Create (props) {
 
   const [form, setForm] = useState({
